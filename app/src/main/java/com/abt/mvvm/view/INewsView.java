@@ -1,6 +1,6 @@
 package com.abt.mvvm.view;
 
-import com.abt.mvvm.base.IBaseView;
+import com.abt.basic.arch.mvvm.view.load.IBaseView;
 
 /**
  * @描述： @INewsView

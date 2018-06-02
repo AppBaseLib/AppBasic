@@ -3,7 +3,7 @@ package com.abt.mvvm.model;
 import android.os.Handler;
 import android.util.Log;
 
-import com.abt.mvvm.base.BaseLoadListener;
+import com.abt.basic.arch.mvvm.view.load.BaseLoadListener;
 import com.abt.mvvm.bean.NewsBean;
 import com.abt.mvvm.bean.SimpleNewsBean;
 import com.abt.mvvm.http.HttpUtils;

@@ -1,6 +1,6 @@
 package com.abt.mvvm.model;
 
-import com.abt.mvvm.base.BaseLoadListener;
+import com.abt.basic.arch.mvvm.view.load.BaseLoadListener;
 import com.abt.mvvm.bean.SimpleNewsBean;
 
 /**

@@ -6,11 +6,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 
+import com.abt.basic.arch.mvvm.viewmodel.IViewModel;
+import com.abt.basic.utils.ToastUtils;
+import com.abt.common.helper.DialogHelper;
 import com.abt.mvvm.R;
 import com.abt.mvvm.adapter.NewsAdapter;
 import com.abt.mvvm.databinding.ActivityMainBinding;
-import com.abt.mvvm.helper.DialogHelper;
-import com.abt.mvvm.utils.ToastUtils;
 import com.abt.mvvm.viewmodel.NewsVM;
 import com.jcodecraeer.xrecyclerview.ProgressStyle;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
@@ -85,5 +86,15 @@ public class MainActivity extends AppCompatActivity implements INewsView, XRecyc
         binding.newsRv.loadMoreComplete(); //结束加载
         binding.newsRv.refreshComplete(); //结束刷新
         ToastUtils.show(mContext, message);
+    }
+
+    @Override
+    public void setViewModel(IViewModel viewModel) {
+
+    }
+
+    @Override
+    public void setToolbarViewModel(Object viewModel) {
+
     }
 }

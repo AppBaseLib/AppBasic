@@ -1,7 +1,7 @@
 package com.abt.mvvm.viewmodel;
 
+import com.abt.basic.arch.mvvm.view.load.BaseLoadListener;
 import com.abt.mvvm.adapter.NewsAdapter;
-import com.abt.mvvm.base.BaseLoadListener;
 import com.abt.mvvm.bean.SimpleNewsBean;
 import com.abt.mvvm.constant.MainConstant;
 import com.abt.mvvm.model.INewsModel;
