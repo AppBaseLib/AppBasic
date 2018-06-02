@@ -1,0 +1,27 @@
+apply plugin: 'maven'
+
+configurations {
+    deployerJars
+}
+
+repositories {
+    mavenCentral()
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "http://localhost:8081/nexus/content/repositories/basic/") {
+                authentication(userName: "admin", password: "admin123")
+            }
+            pom.project {
+                name 'test'
+                version '1.0.0'
+                artifactId 'lib'
+                groupId 'com.android.library'
+                packaging 'aar'
+                description 'library for android'
+            }
+        }
+    }
+}
