@@ -1,4 +1,4 @@
-package com.abt.mvvm.utils;
+package com.abt.basic.utils;
 
 import android.content.Context;
 import android.view.Gravity;
