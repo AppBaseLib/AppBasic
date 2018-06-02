@@ -1,4 +1,4 @@
-package com.abt.mvvm.helper;
+package com.abt.common.helper;
 
 import android.app.ProgressDialog;
 import android.content.Context;
