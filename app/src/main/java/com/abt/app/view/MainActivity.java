@@ -6,13 +6,13 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 
+import com.abt.app.R;
+import com.abt.app.adapter.NewsAdapter;
+import com.abt.app.viewmodel.NewsVM;
 import com.abt.basic.arch.mvvm.viewmodel.IViewModel;
 import com.abt.basic.utils.ToastUtils;
 import com.abt.common.helper.DialogHelper;
-import com.abt.app.R;
-import com.abt.app.adapter.NewsAdapter;
 import com.abt.app.databinding.ActivityMainBinding;
-import com.abt.app.viewmodel.NewsVM;
 import com.jcodecraeer.xrecyclerview.ProgressStyle;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 
