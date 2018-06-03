@@ -1,4 +1,4 @@
-package com.abt.common.data;
+package com.abt.common.util;
 
 import android.content.Context;
 import android.text.Spannable;

@@ -1,4 +1,4 @@
-package com.abt.common.data;
+package com.abt.common.util;
 
 import android.graphics.Bitmap;
 import android.os.Environment;

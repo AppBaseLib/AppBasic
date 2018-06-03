@@ -16,7 +16,7 @@ uploadArchives {
             }
             pom.project {
                 name 'common'
-                version '1.0.0'
+                version '1.0.1'
                 artifactId 'common'
                 groupId 'com.abt.common'
                 packaging 'aar'

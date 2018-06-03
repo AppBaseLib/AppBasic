@@ -1,4 +1,4 @@
-package com.abt.common.data;
+package com.abt.common.util;
 
 import android.app.Activity;
 import android.content.Context;
