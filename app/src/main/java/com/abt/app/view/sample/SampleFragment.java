@@ -1,4 +1,4 @@
-package com.abt.basic_sample;
+package com.abt.app.view.sample;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -6,24 +6,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.abt.app.databinding.FragmentSampleBinding;
 import com.abt.basic.arch.mvvm.view.BaseFragment;
 import com.abt.basic.arch.mvvm.viewmodel.ToolbarViewModel;
-import com.abt.basic_sample.databinding.FragmentMainBinding;
 
 /**
- * @描述： @MainFragment
+ * @描述： @SampleFragment
  * @作者： @黄卫旗
  * @创建时间： @2018/5/28
  */
-public class MainFragment extends BaseFragment<MainViewModel, ToolbarViewModel> {
+public class SampleFragment extends BaseFragment<SampleViewModel, ToolbarViewModel> {
 
-    private FragmentMainBinding mFragmentMainBinding;
+    private FragmentSampleBinding mFragmentMainBinding;
 
     /**
      * 返回实例
      */
-    public static MainFragment newInstance() {
-        return new MainFragment();
+    public static SampleFragment newInstance() {
+        return new SampleFragment();
     }
 
     @Override
@@ -37,7 +37,7 @@ public class MainFragment extends BaseFragment<MainViewModel, ToolbarViewModel> 
     public View onCreateView(LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        mFragmentMainBinding = FragmentMainBinding.inflate(inflater, container, false);
+        mFragmentMainBinding = FragmentSampleBinding.inflate(inflater, container, false);
         mFragmentMainBinding.setMainVM(mViewModel);
         mFragmentMainBinding.setToolbarVM(mToolbarModel);
         return mFragmentMainBinding.getRoot();

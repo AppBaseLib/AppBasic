@@ -1,4 +1,4 @@
-package com.abt.mvvm.view;
+package com.abt.app.view;
 
 import android.content.Context;
 import android.databinding.DataBindingUtil;
@@ -9,14 +9,14 @@ import android.support.v7.widget.LinearLayoutManager;
 import com.abt.basic.arch.mvvm.viewmodel.IViewModel;
 import com.abt.basic.utils.ToastUtils;
 import com.abt.common.helper.DialogHelper;
-import com.abt.mvvm.R;
-import com.abt.mvvm.adapter.NewsAdapter;
-import com.abt.mvvm.databinding.ActivityMainBinding;
-import com.abt.mvvm.viewmodel.NewsVM;
+import com.abt.app.R;
+import com.abt.app.adapter.NewsAdapter;
+import com.abt.app.databinding.ActivityMainBinding;
+import com.abt.app.viewmodel.NewsVM;
 import com.jcodecraeer.xrecyclerview.ProgressStyle;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 
-import static com.abt.mvvm.constant.MainConstant.LoadData.FIRST_LOAD;
+import static com.abt.app.constant.MainConstant.LoadData.FIRST_LOAD;
 
 /**
  * @描述： @MainActivity

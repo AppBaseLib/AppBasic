@@ -1,4 +1,4 @@
-package com.abt.mvvm.view;
+package com.abt.app.view;
 
 import com.abt.basic.arch.mvvm.view.load.IBaseView;
 
