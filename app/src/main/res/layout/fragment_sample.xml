@@ -9,7 +9,7 @@
             type="com.abt.basic.arch.mvvm.viewmodel.ToolbarViewModel" />
         <variable
             name="mainVM"
-            type="com.abt.basic_sample.MainViewModel" />
+            type="com.abt.app.view.sample.SampleViewModel" />
     </data>
 
     <android.support.constraint.ConstraintLayout

@@ -1,7 +1,7 @@
-package com.abt.mvvm.retrofitinterface;
+package com.abt.app.retrofitinterface;
 
-import com.abt.mvvm.bean.NewsBean;
-import com.abt.mvvm.constant.URLConstant;
+import com.abt.app.bean.NewsBean;
+import com.abt.app.constant.URLConstant;
 
 import io.reactivex.Observable;
 import retrofit2.http.GET;

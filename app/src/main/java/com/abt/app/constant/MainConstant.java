@@ -1,4 +1,4 @@
-package com.abt.mvvm.constant;
+package com.abt.app.constant;
 
 /**
  * @描述： @MainConstant

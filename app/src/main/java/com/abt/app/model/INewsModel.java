@@ -1,7 +1,7 @@
-package com.abt.mvvm.model;
+package com.abt.app.model;
 
 import com.abt.basic.arch.mvvm.view.load.BaseLoadListener;
-import com.abt.mvvm.bean.SimpleNewsBean;
+import com.abt.app.bean.SimpleNewsBean;
 
 /**
  * @描述： @INewsModel

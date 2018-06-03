@@ -1,4 +1,4 @@
-package com.abt.mvvm.helper;
+package com.abt.app.helper;
 
 import android.databinding.BindingAdapter;
 import android.widget.ImageView;

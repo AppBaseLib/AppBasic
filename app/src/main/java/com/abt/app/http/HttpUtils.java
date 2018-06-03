@@ -1,8 +1,8 @@
-package com.abt.mvvm.http;
+package com.abt.app.http;
 
-import com.abt.mvvm.bean.NewsBean;
-import com.abt.mvvm.constant.URLConstant;
-import com.abt.mvvm.retrofitinterface.RetrofitInterface;
+import com.abt.app.bean.NewsBean;
+import com.abt.app.constant.URLConstant;
+import com.abt.app.retrofitinterface.RetrofitInterface;
 
 import java.util.concurrent.TimeUnit;
 

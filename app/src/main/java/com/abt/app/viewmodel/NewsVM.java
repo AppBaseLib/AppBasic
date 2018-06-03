@@ -1,12 +1,12 @@
-package com.abt.mvvm.viewmodel;
+package com.abt.app.viewmodel;
 
 import com.abt.basic.arch.mvvm.view.load.BaseLoadListener;
-import com.abt.mvvm.adapter.NewsAdapter;
-import com.abt.mvvm.bean.SimpleNewsBean;
-import com.abt.mvvm.constant.MainConstant;
-import com.abt.mvvm.model.INewsModel;
-import com.abt.mvvm.model.NewsModelImpl;
-import com.abt.mvvm.view.INewsView;
+import com.abt.app.adapter.NewsAdapter;
+import com.abt.app.bean.SimpleNewsBean;
+import com.abt.app.constant.MainConstant;
+import com.abt.app.model.INewsModel;
+import com.abt.app.model.NewsModelImpl;
+import com.abt.app.view.INewsView;
 
 import java.util.List;
 

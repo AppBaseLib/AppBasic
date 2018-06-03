@@ -1,4 +1,4 @@
-package com.abt.mvvm;
+package com.abt.app;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

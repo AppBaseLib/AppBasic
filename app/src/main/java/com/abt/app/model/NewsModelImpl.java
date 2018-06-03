@@ -1,12 +1,12 @@
-package com.abt.mvvm.model;
+package com.abt.app.model;
 
 import android.os.Handler;
 import android.util.Log;
 
 import com.abt.basic.arch.mvvm.view.load.BaseLoadListener;
-import com.abt.mvvm.bean.NewsBean;
-import com.abt.mvvm.bean.SimpleNewsBean;
-import com.abt.mvvm.http.HttpUtils;
+import com.abt.app.bean.NewsBean;
+import com.abt.app.bean.SimpleNewsBean;
+import com.abt.app.http.HttpUtils;
 
 import java.util.ArrayList;
 import java.util.List;

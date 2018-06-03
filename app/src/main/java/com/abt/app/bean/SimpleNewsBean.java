@@ -1,4 +1,4 @@
-package com.abt.mvvm.bean;
+package com.abt.app.bean;
 
 import android.databinding.ObservableBoolean;
 import android.databinding.ObservableField;

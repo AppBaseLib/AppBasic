@@ -1,4 +1,4 @@
-package com.abt.mvvm;
+package com.abt.app;
 
 import org.junit.Test;
 
