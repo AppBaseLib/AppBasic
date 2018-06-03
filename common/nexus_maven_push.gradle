@@ -11,14 +11,14 @@ repositories {
 uploadArchives {
     repositories {
         mavenDeployer {
-            repository(url: "http://localhost:8081/nexus/content/repositories/basic/") {
+            repository(url: "http://localhost:8081/nexus/content/repositories/common/") {
                 authentication(userName: "admin", password: "admin123")
             }
             pom.project {
-                name 'basic'
+                name 'common'
                 version '1.0.0'
-                artifactId 'lib'
-                groupId 'com.abt.basic'
+                artifactId 'common'
+                groupId 'com.abt.common'
                 packaging 'aar'
                 description 'library for android'
             }
