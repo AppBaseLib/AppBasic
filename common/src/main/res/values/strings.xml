@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Common</string>
+
+    <string name="str_hourago">hour ago</string>
+    <string name="str_hoursago">hours ago</string>
+    <string name="str_minago">min ago</string>
+    <string name="str_minsago">mins ago</string>
+    <string name="last">Last</string>
+
 </resources>
