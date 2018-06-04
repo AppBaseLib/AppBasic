@@ -16,6 +16,7 @@
 3、[Andromeda:首个适用于多进程架构的组件通信框架](https://my.oschina.net/u/3783511/blog/1820539)   
 
 ## TODO_LIST  
+0、[AppBaseLib](https://github.com/AppBaseLib/AppBaseLib)    
 1、模块化    
 2、组件化    
 3、插件化  
