@@ -9,6 +9,7 @@
 3、[JIMU](https://github.com/AppBaseLib/JIMU)   
 4、[Andromeda](https://github.com/AppBaseLib/Andromeda)   
 5、[AndroidPluginFramework](https://github.com/AppBaseLib/AndroidPluginFramework)  
+6、[仿京东app 采用组件化架构](https://github.com/AppBaseLib/JD-Test)  
 
 ## 参考资料 
 1、[微信 Android 模块化架构重构实践（上](https://cloud.tencent.com/developer/article/1005631)   
