@@ -16,7 +16,7 @@ uploadArchives {
             }
             pom.project {
                 name 'basic'
-                version '1.0.1'
+                version rootProject.ext.basic["versionCode"]
                 artifactId 'basic'
                 groupId 'com.abt.basic'
                 packaging 'aar'
