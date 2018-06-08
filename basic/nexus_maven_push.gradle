@@ -16,8 +16,8 @@ uploadArchives {
             }
             pom.project {
                 name 'basic'
-                version '1.0.0'
-                artifactId 'lib'
+                version '1.0.1'
+                artifactId 'basic'
                 groupId 'com.abt.basic'
                 packaging 'aar'
                 description 'library for android'
