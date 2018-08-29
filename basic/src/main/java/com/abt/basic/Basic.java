@@ -5,6 +5,6 @@ package com.abt.basic;
  * @作者： @黄卫旗
  * @创建时间： @2018/5/28
  */
-public class Basic {
+public interface Basic {
 
 }

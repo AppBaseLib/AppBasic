@@ -1,4 +1,4 @@
-package com.abt.basic.log;
+package com.abt.basic.logger;
 
 import android.util.Log;
 
