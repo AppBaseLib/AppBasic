@@ -7,6 +7,9 @@ import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.telephony.TelephonyManager;
 
+import com.abt.basic.app.BasicApplication;
+import com.abt.common.app.CommonApp;
+
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -35,7 +38,7 @@ public class NetworkStateUtil {
 
     // 获取有线网连接状态  (待验证) - from WirelessManager.java
     public static boolean getwiredConnectState() {
-        ConnectivityManager mConnectivityManager = (ConnectivityManager) SwipBackApplication.
+        ConnectivityManager mConnectivityManager = (ConnectivityManager) CommonApp.
                 getAppContext().getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo mInternetNetWorkInfo = mConnectivityManager.getNetworkInfo(ConnectivityManager.TYPE_ETHERNET);
         boolean hasInternet = mInternetNetWorkInfo != null &&
@@ -46,7 +49,7 @@ public class NetworkStateUtil {
     //获取热点开关状态 - from HotspotSettingUtil.java
     public static boolean isWifiApOpen() {
         try {
-            WifiManager manager = (WifiManager) SwipBackApplication.
+            WifiManager manager = (WifiManager) CommonApp.
                     getAppContext().getApplicationContext().getSystemService(Context.WIFI_SERVICE);
             //通过放射获取 getWifiApState()方法
             Method method = manager.getClass().getDeclaredMethod("getWifiApState");
