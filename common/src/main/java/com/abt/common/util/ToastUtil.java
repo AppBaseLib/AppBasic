@@ -5,11 +5,11 @@ import android.view.Gravity;
 import android.widget.Toast;
 
 /**
- * @描述： @ToastUtils
+ * @描述： @ToastUtil
  * @作者： @黄卫旗
  * @创建时间： @20/05/2018
  */
-public class ToastUtils {
+public class ToastUtil {
 
     private static Toast toast;
 

@@ -2,7 +2,7 @@ package com.abt.common.data.file;
 
 import android.util.Log;
 
-import com.abt.common.util.FileUtils;
+import com.abt.common.util.FileUtil;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -26,7 +26,7 @@ public class FileHelper<T> {
         ObjectOutputStream objectOutputStream = null;
         FileInputStream fileInputStream = null;
         try {
-            File file = FileUtils.getFilePath(File.separator + FileHelper.projectPath + File.separator, fileName);
+            File file = FileUtil.getFilePath(File.separator + FileHelper.projectPath + File.separator, fileName);
             Log.d(TAG, "saveStorage2SDCard file: "+file.getAbsolutePath().toString());
             fileOutputStream = new FileOutputStream(file.toString());  //新建一个内容为空的文件
             objectOutputStream = new ObjectOutputStream(fileOutputStream);
@@ -60,7 +60,7 @@ public class FileHelper<T> {
         FileInputStream fileInputStream = null;
         ArrayList<T> savedArrayList = new ArrayList<>();
         try {
-            File file = FileUtils.getFilePath(File.separator + FileHelper.projectPath + File.separator, fileName);
+            File file = FileUtil.getFilePath(File.separator + FileHelper.projectPath + File.separator, fileName);
             Log.d(TAG, "getStorageEntities file: "+file.getAbsolutePath().toString());
             fileInputStream = new FileInputStream(file.toString());
             objectInputStream = new ObjectInputStream(fileInputStream);

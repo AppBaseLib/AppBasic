@@ -5,11 +5,11 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 
 /**
- * @描述： @VersionUtils
+ * @描述： @VersionUtil
  * @作者： @黄卫旗
  * @创建时间： @03/06/2018
  */
-public class VersionUtils {
+public class VersionUtil {
 
     /**
      * get App versionCode

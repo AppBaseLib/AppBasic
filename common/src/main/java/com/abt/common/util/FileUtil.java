@@ -11,9 +11,9 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class FileUtils {
+public class FileUtil {
 
-	private static final String TAG = FileUtils.class.getSimpleName();
+	private static final String TAG = FileUtil.class.getSimpleName();
 	
 	public static void saveBitmap(Bitmap bm, String picName) {
 		Log.d(TAG, "保存图片");
@@ -129,5 +129,15 @@ public class FileUtils {
 			s.charAt(i);
 		}
 		return path;
+	}
+
+	public static void createPath(String path) {
+		File file = new File(path);
+		if (!file.getParentFile().exists()) {
+			file.getParentFile().mkdirs();
+		}
+		if (!file.exists()) {
+			file.mkdir();
+		}
 	}
 }
