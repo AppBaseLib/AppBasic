@@ -19,7 +19,6 @@ import java.util.Map;
 /**
  * 没有使用ORMLite框架，暂时用不上该类
  * @author weiqi.huang
- *
  */
 public class MySQL {
 	private static final String TAG = MySQL.class.getSimpleName();

@@ -2,14 +2,12 @@ package com.abt.common.data;
 
 import android.util.Log;
 
-import com.abt.common.data.file.FileHelper;
-
 public class DataManager {
 
 	private static final String TAG = DataManager.class.getSimpleName();
 	private DataManager mManager;
 	
-	private FileHelper mFileHelper;
+	private FileHelpera mFileHelper;
 
 	public DataManager getInstance() {
 		if (mManager == null) {
@@ -19,7 +17,7 @@ public class DataManager {
 	}
 	
 	public void init() {
-		mFileHelper = new FileHelper();
+		mFileHelper = new FileHelpera();
 	}
 	
 	public void test() {
