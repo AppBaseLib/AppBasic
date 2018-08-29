@@ -27,4 +27,10 @@ dependencies {
     testImplementation rootProject.ext.test["junit"]
     api 'com.jcodecraeer:xrecyclerview:1.5.9'
     implementation 'com.orhanobut:logger:2.2.0'
+
+    implementation rootProject.ext.dependencies["glide"]
+    implementation rootProject.ext.dependencies["glide-okhttp3-integration"]
+
+    debugCompile rootProject.ext.dependencies["debugCompile"]
+    releaseCompile rootProject.ext.dependencies["releaseCompile"]
 }
