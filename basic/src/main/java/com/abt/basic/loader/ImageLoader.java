@@ -38,7 +38,6 @@ public final class ImageLoader {
     private boolean mLastStatus = false;
     private Handler mMainThreadHandler;
 
-
     public static ImageLoader into(ImageView imageView) {
         return new ImageLoader(imageView);
     }
