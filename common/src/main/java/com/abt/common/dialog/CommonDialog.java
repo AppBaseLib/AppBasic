@@ -92,11 +92,9 @@ public class CommonDialog extends BaseDialog<CommonDialogViewModel> {
     }
 
     public interface DialogListener {
-        public void onPositive(DialogViewModel vm);
-
-        public void onNegative(DialogViewModel vm);
-
-        public void onNeutral(DialogViewModel vm);
+        void onPositive(DialogViewModel vm);
+        void onNegative(DialogViewModel vm);
+        void onNeutral(DialogViewModel vm);
     }
 
 }

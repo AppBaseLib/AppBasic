@@ -1,4 +1,4 @@
-package com.abt.basic.arch.mvvm;
+package com.abt.basic.arch.mvvm.view;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

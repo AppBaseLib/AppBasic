@@ -3,7 +3,7 @@ package com.abt.common.util;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 
-import com.abt.common.app.BasicApplication;
+import com.abt.basic.app.BasicApplication;
 
 /**
  * @描述： @获取资源工具类

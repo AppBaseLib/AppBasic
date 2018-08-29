@@ -9,7 +9,6 @@ import android.view.Window;
 
 import com.abt.basic.R;
 import com.abt.basic.arch.mvvm.viewmodel.IViewModel;
-import com.abt.basic.arch.mvvm.ViewModelHolder;
 
 /**
  * @描述： @MVVM Activity基类

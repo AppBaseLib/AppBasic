@@ -22,7 +22,6 @@ import java.util.Map;
  *
  */
 public class MySQL {
-
 	private static final String TAG = MySQL.class.getSimpleName();
 	private static Connection mConnection = null;
 	private static ResultSet mResultSet = null;
