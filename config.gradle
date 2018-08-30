@@ -1,7 +1,7 @@
 /**
  * 资源依赖配置表
  */
-def supportVersion      = "26.1.0"
+def supportVersion      = "27.0.2"
 def eventbusVersion     = "3.1.1"
 def constraintVerion    = "1.0.2"
 def streamVersion       = "1.0.8"
