@@ -5,7 +5,7 @@ import android.annotation.SuppressLint;
 import com.abt.basic.arch.mvvm.view.dialog.BaseDialog;
 import com.abt.basic.arch.mvvm.view.dialog.DialogViewModel;
 import com.abt.common.R;
-import com.abt.common.util.ResourceUtil;
+import com.abt.common.utils.ResourceUtil;
 
 /**
  * @描述：     @业务层对话框

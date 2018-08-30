@@ -2,7 +2,7 @@ package com.abt.common.data.file;
 
 import android.util.Log;
 
-import com.abt.common.util.FileUtil;
+import com.abt.common.utils.FileUtil;
 
 import java.io.File;
 import java.io.FileInputStream;

@@ -2,7 +2,7 @@ package com.abt.common.config;
 
 import android.os.Environment;
 
-import com.abt.common.util.FileUtil;
+import com.abt.common.utils.FileUtil;
 
 import java.io.File;
 
