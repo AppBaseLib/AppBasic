@@ -28,4 +28,7 @@ dependencies {
     testImplementation rootProject.ext.test["junit"]
     implementation rootProject.ext.dependencies["app-basic"]
     implementation project(':basic')
+    //net
+    implementation rootProject.ext.dependencies["retrofit"]
+
 }

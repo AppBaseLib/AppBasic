@@ -14,7 +14,7 @@ import java.io.Serializable;
 /**
  * 文件存储
  */
-public class FilePreferences implements Preferences {
+public class FilePrefsImpl implements PrefsHelper {
 
 	private static final String PREFERENCE_NAME = "CS_Preferences";
 	private static final String PARAM_USER_ACCOUNT = "account_name";
@@ -25,16 +25,16 @@ public class FilePreferences implements Preferences {
 	private static final String PARAM_USER_EMAIL = "user_email";
 	private static final String PARAM_USER_ICON = "user_icon";
 
-	private static Preferences mPre;
+	private static PrefsHelper mPre;
 	private static SharedPreferences mSharedPreferences;
 
-	protected FilePreferences(Context context) {
+	public FilePrefsImpl(Context context) {
 		mSharedPreferences = context.getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE);
 	}
 
-	public static synchronized Preferences getInstance(Context context) {
+	public static synchronized PrefsHelper getInstance(Context context) {
 		if (mPre == null) {
-			mPre = new FilePreferences(context.getApplicationContext());
+			mPre = new FilePrefsImpl(context.getApplicationContext());
 		}
 		return mPre;
 	}

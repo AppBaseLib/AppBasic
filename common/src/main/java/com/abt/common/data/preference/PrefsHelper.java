@@ -7,10 +7,10 @@ import java.io.Serializable;
 
 /**
  * 界面调用：<br>
- * Preferences preferences = Preferences.Factory.getmInstance(this); <br>
+ * PrefsHelper preferences = PrefsHelper.Factory.getInstance(this); <br>
  * String accountId = preferences.getAccountId();
  */
-public interface Preferences {
+public interface PrefsHelper {
 
 	public SharedPreferences getSharedPreferences();
 
@@ -33,8 +33,8 @@ public interface Preferences {
 	public void setToken(String token);
 
 	public static final class Factory {
-		public static final Preferences getInstance(Context context) {
-			return MemoryPreferences.getInstance(context);
+		public static final PrefsHelper getInstance(Context context) {
+			return MemoPrefsImpl.getInstance(context);
 		}
 	}
 }
