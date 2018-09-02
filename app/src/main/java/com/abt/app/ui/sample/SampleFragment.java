@@ -40,7 +40,7 @@ public class SampleFragment extends BaseFragment<SampleViewModel, ToolbarViewMod
                              @Nullable Bundle savedInstanceState) {
         mFragmentMainBinding = FragmentSampleBinding.inflate(inflater, container, false);
         mFragmentMainBinding.setToolbarVM(mToolbarModel);
-        mFragmentMainBinding.setSampleVM(mViewModel);
+        //mFragmentMainBinding.setSampleVM(mViewModel);
         return mFragmentMainBinding.getRoot();
     }
 

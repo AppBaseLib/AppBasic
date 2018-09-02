@@ -6,13 +6,14 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 
+import com.abt.app.R;
 import com.abt.app.app.MainConstant;
 import com.abt.app.databinding.ActivityMainBinding;
 import com.abt.app.ui.adapter.NewsAdapter;
-import com.abt.basic.arch.mvvm.viewmodel.IViewModel;
-import com.abt.common.helper.DialogHelper;
-import com.abt.sample.R;
 import com.abt.app.viewmodel.NewsVM;
+import com.abt.basic.arch.mvvm.viewmodel.IViewModel;
+import com.abt.basic.utils.ToastUtil;
+import com.abt.common.helper.DialogHelper;
 import com.jcodecraeer.xrecyclerview.ProgressStyle;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 
@@ -84,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements IMainView,
         DialogHelper.getInstance().close();
         binding.newsRv.loadMoreComplete(); //结束加载
         binding.newsRv.refreshComplete(); //结束刷新
-        ToastUtils.show(mContext, message);
+        ToastUtil.show(message);
     }
 
     @Override

@@ -1,49 +1,43 @@
 package com.abt.basic.utils;
 
+import android.view.Gravity;
 import android.widget.Toast;
 
 import com.abt.basic.app.BasicApplication;
 
 /**
- * @描述：     @安全显示吐司
- * @作者：     @黄卫旗
- * @创建时间： @2017-04-25
+ * @描述： @ToastUtil
+ * @作者： @黄卫旗
+ * @创建时间： @20/05/2018
  */
 public class ToastUtil {
-    public static final int LENGTH_SHORT = Toast.LENGTH_SHORT;
-    public static final int LENGTH_LONG  = Toast.LENGTH_LONG;
 
-    private static Toast sToast;
+    private static Toast toast;
 
     /**
-     * 显示吐司
-     * @param resId
+     * show toast
+     * @param msg     message string
      */
-    public static final void showToast(int resId){
-        if(null == sToast) {
-            sToast = Toast.makeText(
-                    BasicApplication.getAppContext(),resId, LENGTH_SHORT);
-            // PS: 后面的偏移量针对前面的Gravity来设置的
-        }else{
-            sToast.setText(resId);
+    public static void show(String msg) {
+        if (toast == null) {
+            toast = Toast.makeText(BasicApplication.getAppContext(), "", Toast.LENGTH_SHORT);
         }
-
-        sToast.show();
+        toast.setText(msg);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show();
     }
 
     /**
-     * 显示吐司
-     * @param msg
+     * show toast
+     * @param msgId   message resource id
      */
-    public static final void showToast(String msg){
-        if(null == sToast) {
-            sToast = Toast.makeText(BasicApplication.getAppContext()
-                    ,msg, LENGTH_SHORT);
-        }else{
-            sToast.setText(msg);
+    public static void show(int msgId) {
+        if (toast == null) {
+            toast = Toast.makeText(BasicApplication.getAppContext(), "", Toast.LENGTH_SHORT);
         }
-        sToast.show();
+        toast.setText(msgId);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show();
     }
-
 
 }

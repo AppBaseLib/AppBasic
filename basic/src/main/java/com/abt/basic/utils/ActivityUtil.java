@@ -37,7 +37,7 @@ public final class ActivityUtil {
         Intent intent = isExit(context,packageName);
         if (intent==null) {
             LogHelper.i(TAG,packageName+" not found!");
-            ToastUtil.showToast("package not found!");
+            ToastUtil.show("package not found!");
             return;
         }
         context.startActivity(intent);
