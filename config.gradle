@@ -48,7 +48,7 @@ def nativeCrashVersion     = "latest.release"
 
 project.ext {
 
-    //app
+    //sample
     app = [
             applicationId    : "com.abt.app",
             versionCode      : 1,

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" >
+<layout xmlns:android="http://schemas.android.com/apk/res/android" >
     <!--绑定数据-->
     <data>
         <variable
@@ -9,7 +8,7 @@
             type="com.abt.basic.arch.mvvm.viewmodel.ToolbarViewModel" />
         <variable
             name="sampleVM"
-            type="com.abt.app.view.sample.SampleViewModel" />
+            type="com.abt.app.viewmodel.SampleViewModel" />
     </data>
 
     <LinearLayout

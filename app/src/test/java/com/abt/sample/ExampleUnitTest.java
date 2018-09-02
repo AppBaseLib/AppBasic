@@ -1,4 +1,4 @@
-package com.abt.app;
+package com.abt.sample;
 
 import org.junit.Test;
 

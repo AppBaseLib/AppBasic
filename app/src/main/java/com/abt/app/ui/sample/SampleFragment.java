@@ -1,4 +1,4 @@
-package com.abt.app.view.sample;
+package com.abt.app.ui.sample;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import com.abt.app.databinding.FragmentSampleBinding;
 import com.abt.basic.arch.mvvm.view.BaseFragment;
 import com.abt.basic.arch.mvvm.viewmodel.ToolbarViewModel;
+import com.abt.app.viewmodel.SampleViewModel;
 
 /**
  * @描述： @SampleFragment
@@ -38,8 +39,8 @@ public class SampleFragment extends BaseFragment<SampleViewModel, ToolbarViewMod
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         mFragmentMainBinding = FragmentSampleBinding.inflate(inflater, container, false);
-        mFragmentMainBinding.setMainVM(mViewModel);
         mFragmentMainBinding.setToolbarVM(mToolbarModel);
+        mFragmentMainBinding.setSampleVM(mViewModel);
         return mFragmentMainBinding.getRoot();
     }
 

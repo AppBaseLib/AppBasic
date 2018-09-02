@@ -1,16 +1,15 @@
-package com.abt.app.adapter;
+package com.abt.app.ui.adapter;
 
 import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
 import android.view.ViewGroup;
 
-import com.abt.app.BR;
-import com.abt.app.R;
-import com.abt.app.bean.SimpleNewsBean;
+import com.abt.sample.BR;
+import com.abt.sample.R;
+import com.abt.app.data.bean.SimpleNewsBean;
 import com.abt.basic.arch.mvvm.view.load.BaseAdapter;
 import com.abt.basic.arch.mvvm.view.load.BaseViewHolder;
-import com.abt.basic.utils.ToastUtils;
 
 /**
  * @描述： @NewsAdapter

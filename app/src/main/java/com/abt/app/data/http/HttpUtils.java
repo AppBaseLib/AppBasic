@@ -1,8 +1,9 @@
-package com.abt.app.http;
+package com.abt.app.data.http;
 
-import com.abt.app.bean.NewsBean;
-import com.abt.app.constant.URLConstant;
-import com.abt.app.retrofitinterface.RetrofitInterface;
+import com.abt.app.app.URLConstant;
+import com.abt.common.data.network.api.WebApis;
+import com.abt.app.data.bean.NewsBean;
+import com.abt.app.data.http.api.NewsApis;
 
 import java.util.concurrent.TimeUnit;
 
@@ -21,13 +22,13 @@ public class HttpUtils {
     private static final int DEFAULT_TIMEOUT = 8; //连接 超时的时间，单位：秒
     private static HttpUtils httpUtils;
     private static Retrofit retrofit;
-    private static RetrofitInterface retrofitInterface;
+    private static WebApis retrofitInterface;
     private static final OkHttpClient client = new OkHttpClient.Builder().
             connectTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS).
             readTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS).
             writeTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS).build();
 
-    private synchronized static RetrofitInterface getRetrofit() {
+    private synchronized static NewsApis getRetrofit() {
         //初始化retrofit的配置
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
@@ -36,9 +37,9 @@ public class HttpUtils {
                     .addConverterFactory(GsonConverterFactory.create())
                     .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .build();
-            retrofitInterface = retrofit.create(RetrofitInterface.class);
+            retrofitInterface = retrofit.create(WebApis.class);
         }
-        return retrofitInterface;
+        return (NewsApis) retrofitInterface;
     }
 
     //获取新闻数据

@@ -1,4 +1,4 @@
-package com.abt.app.view;
+package com.abt.app.ui.main;
 
 import android.content.Context;
 import android.databinding.DataBindingUtil;
@@ -6,24 +6,23 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 
-import com.abt.app.R;
-import com.abt.app.adapter.NewsAdapter;
-import com.abt.app.viewmodel.NewsVM;
-import com.abt.basic.arch.mvvm.viewmodel.IViewModel;
-import com.abt.basic.utils.ToastUtils;
-import com.abt.common.helper.DialogHelper;
+import com.abt.app.app.MainConstant;
 import com.abt.app.databinding.ActivityMainBinding;
+import com.abt.app.ui.adapter.NewsAdapter;
+import com.abt.basic.arch.mvvm.viewmodel.IViewModel;
+import com.abt.common.helper.DialogHelper;
+import com.abt.sample.R;
+import com.abt.app.viewmodel.NewsVM;
 import com.jcodecraeer.xrecyclerview.ProgressStyle;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
-
-import static com.abt.app.constant.MainConstant.LoadData.FIRST_LOAD;
 
 /**
  * @描述： @MainActivity
  * @作者： @黄卫旗
  * @创建时间： @20/05/2018
  */
-public class MainActivity extends AppCompatActivity implements INewsView, XRecyclerView.LoadingListener {
+public class MainActivity extends AppCompatActivity implements IMainView,
+        XRecyclerView.LoadingListener {
 
     private Context mContext;
     private ActivityMainBinding binding;
@@ -68,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements INewsView, XRecyc
 
     @Override
     public void loadStart(int loadType) {
-        if (loadType == FIRST_LOAD) {
+        if (loadType == MainConstant.LoadData.FIRST_LOAD) {
             DialogHelper.getInstance().show(mContext, "加载中...");
         }
     }

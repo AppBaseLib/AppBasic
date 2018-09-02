@@ -1,7 +1,7 @@
 package com.abt.app.model;
 
+import com.abt.app.data.bean.SimpleNewsBean;
 import com.abt.basic.arch.mvvm.view.load.BaseLoadListener;
-import com.abt.app.bean.SimpleNewsBean;
 
 /**
  * @描述： @INewsModel
@@ -14,5 +14,7 @@ public interface INewsModel {
      * @param page 页数
      * @param loadListener
      */
+    void loadNewsData(int page, BaseLoadListener<SimpleNewsBean> loadListener);
+
     void loadNewsData(int page, BaseLoadListener<SimpleNewsBean> loadListener);
 }

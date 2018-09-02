@@ -1,4 +1,4 @@
-package com.abt.app.view.sample;
+package com.abt.app.viewmodel;
 
 import android.databinding.BaseObservable;
 import android.databinding.ObservableField;

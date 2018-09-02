@@ -3,15 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="com.abt.app.R" />
+        <import type="com.abt.sample.R" />
 
         <variable
             name="simpleNewsBean"
-            type="com.abt.app.bean.SimpleNewsBean" />
+            type="com.abt.sample.bean.SimpleNewsBean" />
 
         <variable
             name="adapter"
-            type="com.abt.app.adapter.NewsAdapter" />
+            type="com.abt.sample.adapter.NewsAdapter" />
 
         <variable
             name="position"

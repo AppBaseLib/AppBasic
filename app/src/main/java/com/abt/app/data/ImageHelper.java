@@ -1,4 +1,4 @@
-package com.abt.app.helper;
+package com.abt.app.data;
 
 import android.databinding.BindingAdapter;
 import android.widget.ImageView;

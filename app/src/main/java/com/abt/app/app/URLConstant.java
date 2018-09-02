@@ -1,4 +1,4 @@
-package com.abt.app.constant;
+package com.abt.app.app;
 
 /**
  * @描述： @URLConstant

@@ -1,12 +1,12 @@
 package com.abt.app.viewmodel;
 
-import com.abt.basic.arch.mvvm.view.load.BaseLoadListener;
-import com.abt.app.adapter.NewsAdapter;
-import com.abt.app.bean.SimpleNewsBean;
-import com.abt.app.constant.MainConstant;
+import com.abt.app.app.MainConstant;
+import com.abt.app.data.bean.SimpleNewsBean;
 import com.abt.app.model.INewsModel;
 import com.abt.app.model.NewsModelImpl;
-import com.abt.app.view.INewsView;
+import com.abt.app.ui.adapter.NewsAdapter;
+import com.abt.app.ui.main.IMainView;
+import com.abt.basic.arch.mvvm.view.load.BaseLoadListener;
 
 import java.util.List;
 
@@ -18,12 +18,12 @@ import java.util.List;
 public class NewsVM implements BaseLoadListener<SimpleNewsBean> {
     private static final String TAG = "NewsVM";
     private INewsModel mNewsModel;
-    private INewsView mNewsView;
+    private IMainView mNewsView;
     private NewsAdapter mAdapter;
     private int currPage = 1; //当前页数
     private int loadType; //加载数据的类型
 
-    public NewsVM(INewsView mNewsView, NewsAdapter mAdapter) {
+    public NewsVM(IMainView mNewsView, NewsAdapter mAdapter) {
         this.mNewsView = mNewsView;
         this.mAdapter = mAdapter;
         mNewsModel = new NewsModelImpl();
