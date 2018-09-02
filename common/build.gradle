@@ -26,9 +26,8 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation rootProject.ext.dependencies["appcompat-v7"]
     testImplementation rootProject.ext.test["junit"]
-    implementation rootProject.ext.dependencies["app-basic"]
-    implementation project(':basic')
+    //implementation rootProject.ext.dependencies["app-basic"]
     //net
     implementation rootProject.ext.dependencies["retrofit"]
-
+    implementation project(':basic')
 }

@@ -5,7 +5,7 @@ package com.abt.basic.utils;
  * @作者：     @黄卫旗
  * @创建时间： @2017-04-25
  */
-public enum MemoryConvertUtil {
+public enum MemoConvertUtil {
     /** 转换任意单位的大小, 返回结果会包含两位小数但不包含单位. */
     Arbitrary {
         @Override

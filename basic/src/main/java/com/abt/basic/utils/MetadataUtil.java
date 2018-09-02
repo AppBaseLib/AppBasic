@@ -27,7 +27,7 @@ public final class MetadataUtil {
         try {
             retriever.setDataSource(filepath);
             metadata                     = new Metadata();
-//            metadata.length              = MemoryConvertUtil.BTrim.convert(new File(filepath).length());
+//            metadata.length              = MemoConvertUtil.BTrim.convert(new File(filepath).length());
             metadata.length              = new File(filepath).length();
             metadata.firstFrame         = retriever.getFrameAtTime();
             metadata.date                = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DATE);

@@ -83,7 +83,7 @@ public final class SDCardUtil {
         long blockSize, availableBlocks;
         availableBlocks = stat.getAvailableBlocksLong();
         blockSize = stat.getBlockSizeLong();
-        return MemoryConvertUtil.Arbitrary.convert(availableBlocks * blockSize);
+        return MemoConvertUtil.Arbitrary.convert(availableBlocks * blockSize);
     }
 
     /**
