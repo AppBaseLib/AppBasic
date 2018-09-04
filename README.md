@@ -1,5 +1,5 @@
 
-# AppBasicFrame  
+# MvvmBasicFrame  
 1、基于MVVMSample的App基础框架项目   
 2、框架进化趋势：模块化、组件化、插件化   
 
