@@ -6,30 +6,28 @@ import android.content.SharedPreferences;
 import java.util.Set;
 
 /**
- * @描述：     @Preference管理工具类
- * @作者：     @黄卫旗
+ * @描述： @Preference管理工具类
+ * @作者： @黄卫旗
  * @创建时间： @2017-04-25
  */
 public class SharedPrefsManager {
 
-    private static SharedPreferences           sPreference;
-    private static SharedPreferences.Editor    sEditor;
+    private static SharedPreferences sPreference;
+    private static SharedPreferences.Editor sEditor;
 
     /**
      * 初始化
      * @param name
      */
-    public static void initialize(Context context,String name){
-        if(sPreference == null){
-            sPreference = context.getSharedPreferences(name,
-                    Context.MODE_PRIVATE);
-            sEditor     = sPreference.edit();
+    public static void initialize(Context context, String name) {
+        if (sPreference == null) {
+            sPreference = context.getSharedPreferences(name, Context.MODE_PRIVATE);
+            sEditor = sPreference.edit();
         }
     }
 
     private static final boolean isValidate() {
-        if (null == sPreference
-                || null == sEditor) {
+        if (null == sPreference || null == sEditor) {
             return false;
         }
         return true;
@@ -47,7 +45,6 @@ public class SharedPrefsManager {
      * 获取string键值
      * @param key
      * @param defValue
-     * @return
      */
     public static final String getString(String key, String defValue) {
         if (!isValidate() || key == null)
@@ -139,7 +136,6 @@ public class SharedPrefsManager {
      * 获取boolean类型
      * @param key
      * @param defValue
-     * @return
      */
     public static boolean getBoolean(String key, boolean defValue) {
         if (!isValidate() || key == null)
@@ -191,3 +187,4 @@ public class SharedPrefsManager {
         sEditor.putStringSet(key, value).commit();
     }
 }
+
