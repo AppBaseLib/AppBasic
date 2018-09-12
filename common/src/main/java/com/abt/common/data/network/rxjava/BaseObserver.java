@@ -1,10 +1,30 @@
+package com.abt.common.data.network.rxjava;
+
+import android.content.Context;
+import android.os.NetworkOnMainThreadException;
+import android.support.annotation.CallSuper;
+import android.text.TextUtils;
+
+import com.abt.basic.logger.LogHelper;
+import com.abt.common.data.bean.BaseResponse;
+import com.google.gson.Gson;
+
+import java.io.IOException;
+import java.net.ConnectException;
+import java.net.SocketTimeoutException;
+import java.net.UnknownHostException;
+import java.net.UnknownServiceException;
+
+import io.reactivex.Observer;
+import io.reactivex.disposables.Disposable;
+import retrofit2.HttpException;
 
 /**
  * @author 黄卫旗
  * @description BaseObserver
  * @time 2018/09/07
  */
-public abstract class BaseObserver<T> implements Observer<HttpResponse<T>> {
+public abstract class BaseObserver<T> implements Observer<BaseResponse<T>> {
 
     private final String TAG = BaseObserver.class.getSimpleName();
     private Context mContext;
@@ -60,17 +80,17 @@ public abstract class BaseObserver<T> implements Observer<HttpResponse<T>> {
     }
 
     @Override
-    public final void onNext(HttpResponse<T> response) {
+    public final void onNext(BaseResponse<T> response) {
         // HttpUiTips.dismissDialog(mContext);
         if (!disposable.isDisposed()) {
             disposable.dispose();
         }
-        if (response.getCode() == RESPONSE_CODE_OK || response.getCode() == 200) {
+        if (response.getErrorCode() == RESPONSE_CODE_OK || response.getErrorCode() == 200) {
             // response.getCode() == 200 GOOD LIFE  的API真够奇怪的
             // 这里拦截一下使用测试
-            onSuccess(response.getResult());
+            onSuccess(response.getData());
         } else {
-            onFailure(response.getCode(), response.getError());
+            onFailure(response.getErrorCode(), response.getErrorMsg());
         }
     }
 
@@ -149,10 +169,10 @@ public abstract class BaseObserver<T> implements Observer<HttpResponse<T>> {
         }
 
         try {
-            HttpResponse errorResponse = gson.fromJson(errorBodyStr, HttpResponse.class);
+            BaseResponse errorResponse = gson.fromJson(errorBodyStr, BaseResponse.class);
             if (null != errorResponse) {
-                errorCode = errorResponse.getCode();
-                errorMsg = errorResponse.getError();
+                errorCode = errorResponse.getErrorCode();
+                errorMsg = errorResponse.getErrorMsg();
             }
         } catch (Exception jsonException) {
             jsonException.printStackTrace();

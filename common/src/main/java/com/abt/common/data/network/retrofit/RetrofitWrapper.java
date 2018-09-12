@@ -1,3 +1,23 @@
+package com.abt.common.data.network.retrofit;
+
+import com.abt.basic.utils.NetworkUtil;
+import com.abt.common.BuildConfig;
+import com.abt.common.app.CommonApp;
+import com.abt.common.config.RetrofitConfig;
+import com.abt.common.config.URLConstant;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
+import okhttp3.Cache;
+import okhttp3.CacheControl;
+import okhttp3.Interceptor;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+import retrofit2.Call;
+import retrofit2.Retrofit;
 
 /**
  * @author 黄卫旗
@@ -59,7 +79,7 @@ public class RetrofitWrapper {
         }
 
         // 设置缓存目录
-        File cacheFile = new File(LatestApp.getAppContext().getExternalCacheDir(), RetrofitConfig.CACHE_NAME);
+        File cacheFile = new File(CommonApp.getAppContext().getExternalCacheDir(), RetrofitConfig.CACHE_NAME);
         // 生成缓存50M
         Cache cache = new Cache(cacheFile, RetrofitConfig.CACHE_SIZE);
         // 缓存拦截器
@@ -68,7 +88,7 @@ public class RetrofitWrapper {
             public Response intercept(Chain chain) throws IOException {
                 Request request = chain.request();
                 // 网络不可用
-                if (!NetworkUtil.isAvailable(LatestApp.getAppContext())) {
+                if (!NetworkUtil.isAvailable()) {
                     // 在请求头中加入，强制使用缓存，不访问网络
                     request = request.newBuilder()
                             .cacheControl(CacheControl.FORCE_CACHE)
@@ -76,7 +96,7 @@ public class RetrofitWrapper {
                 }
                 Response response = chain.proceed(request);
                 // 网络可用
-                if (NetworkUtil.isAvailable(LatestApp.getAppContext())) {
+                if (NetworkUtil.isAvailable()) {
                     int maxAge = 0;
                     // 有网络时 在响应头中加入，设置缓存超时时间0个小时
                     response.newBuilder()
@@ -85,7 +105,7 @@ public class RetrofitWrapper {
                             .build();
                 } else {
                     // 无网络时，在响应头中加入：设置超时为4周
-                    int maxStale = RetrofitConfig.CONNECT_TIME_OUT;
+                    int maxStale = RetrofitConfig.MAX_STALE;
                     response.newBuilder()
                             .header("Cache-Control", "public, only-if-cached, max-stale=" + maxStale)
                             .removeHeader("pragma")
