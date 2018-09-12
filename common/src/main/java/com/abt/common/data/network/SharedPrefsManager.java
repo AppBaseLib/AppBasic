@@ -1,9 +1,5 @@
-package com.abt.basic.prefs;
 
-import android.content.Context;
-import android.content.SharedPreferences;
 
-import java.util.Set;
 
 /**
  * @描述： @Preference管理工具类
@@ -187,4 +183,5 @@ public class SharedPrefsManager {
         sEditor.putStringSet(key, value).commit();
     }
 }
+
 
