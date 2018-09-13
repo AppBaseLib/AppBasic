@@ -9,7 +9,7 @@ import android.net.wifi.WifiManager;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
 
-import com.abt.basic.app.BasicApplication;
+import com.abt.basic.app.BasicApp;
 
 import static android.content.Context.WIFI_SERVICE;
 
@@ -37,7 +37,7 @@ public final class NetworkUtil {
      *
      */
     public static void openWirelessSettings() {
-        final Context context = BasicApplication.getAppContext();
+        final Context context = BasicApp.getAppContext();
         if (android.os.Build.VERSION.SDK_INT > 10) {
             context.startActivity(new Intent(Settings.ACTION_SETTINGS));
         } else {
@@ -51,7 +51,7 @@ public final class NetworkUtil {
      * @return NetworkInfo
      */
     public static NetworkInfo getActiveNetworkInfo() {
-        final Context context = BasicApplication.getAppContext();
+        final Context context = BasicApp.getAppContext();
         ConnectivityManager cm = (ConnectivityManager) context
                 .getSystemService(Context.CONNECTIVITY_SERVICE);
         return cm.getActiveNetworkInfo();
@@ -69,7 +69,7 @@ public final class NetworkUtil {
     }
 
     public static final boolean isAirplaneMode(){
-        return Settings.System.getInt(BasicApplication.getAppContext().getContentResolver(),
+        return Settings.System.getInt(BasicApp.getAppContext().getContentResolver(),
                 Settings.System.AIRPLANE_MODE_ON, 0) != 0;
     }
     /**
@@ -99,7 +99,7 @@ public final class NetworkUtil {
      * @return {@code true}: 连接<br>{@code false}: 未连接
      */
     public static boolean isWifiConnected() {
-        final Context context  = BasicApplication.getAppContext();
+        final Context context  = BasicApp.getAppContext();
         ConnectivityManager cm = (ConnectivityManager) context
                 .getSystemService(Context.CONNECTIVITY_SERVICE);
         return cm != null && cm.getActiveNetworkInfo() != null &&
@@ -112,7 +112,7 @@ public final class NetworkUtil {
      * @return 移动网络运营商名称
      */
     public static String getNetworkOperatorName() {
-        final Context context = BasicApplication.getAppContext();
+        final Context context = BasicApp.getAppContext();
         TelephonyManager tm = (TelephonyManager) context
                 .getSystemService(Context.TELEPHONY_SERVICE);
         return tm != null ? tm.getNetworkOperatorName() : null;
@@ -130,7 +130,7 @@ public final class NetworkUtil {
      * </ul>
      */
     public static int getPhoneType() {
-        final Context context = BasicApplication.getAppContext();
+        final Context context = BasicApp.getAppContext();
         TelephonyManager tm = (TelephonyManager) context
                 .getSystemService(Context.TELEPHONY_SERVICE);
         return tm != null ? tm.getPhoneType() : -1;
@@ -238,7 +238,7 @@ public final class NetworkUtil {
     }
 
     public static int getWifiSignal() {
-        Context context = BasicApplication.getAppContext();
+        Context context = BasicApp.getAppContext();
         WifiManager wifiManager = (WifiManager) context.getApplicationContext().getSystemService(WIFI_SERVICE);
         WifiInfo wifiInfo = wifiManager.getConnectionInfo();
         int level = wifiInfo.getRssi();

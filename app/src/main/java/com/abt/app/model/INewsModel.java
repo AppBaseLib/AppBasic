@@ -17,4 +17,5 @@ public interface INewsModel {
     void loadNewsData(int page, BaseLoadListener<SimpleNewsBean> loadListener);
 
     void loadNewsData(int page, BaseLoadListener<SimpleNewsBean> loadListener);
+
 }

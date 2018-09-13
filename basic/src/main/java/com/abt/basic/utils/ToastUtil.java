@@ -3,7 +3,7 @@ package com.abt.basic.utils;
 import android.view.Gravity;
 import android.widget.Toast;
 
-import com.abt.basic.app.BasicApplication;
+import com.abt.basic.app.BasicApp;
 
 /**
  * @描述： @ToastUtil
@@ -20,7 +20,7 @@ public class ToastUtil {
      */
     public static void show(String msg) {
         if (toast == null) {
-            toast = Toast.makeText(BasicApplication.getAppContext(), "", Toast.LENGTH_SHORT);
+            toast = Toast.makeText(BasicApp.getAppContext(), "", Toast.LENGTH_SHORT);
         }
         toast.setText(msg);
         toast.setGravity(Gravity.CENTER, 0, 0);
@@ -33,7 +33,7 @@ public class ToastUtil {
      */
     public static void show(int msgId) {
         if (toast == null) {
-            toast = Toast.makeText(BasicApplication.getAppContext(), "", Toast.LENGTH_SHORT);
+            toast = Toast.makeText(BasicApp.getAppContext(), "", Toast.LENGTH_SHORT);
         }
         toast.setText(msgId);
         toast.setGravity(Gravity.CENTER, 0, 0);

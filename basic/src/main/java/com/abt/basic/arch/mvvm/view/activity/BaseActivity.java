@@ -1,4 +1,4 @@
-package com.abt.basic.arch.mvvm.view;
+package com.abt.basic.arch.mvvm.view.activity;
 
 import android.databinding.BaseObservable;
 import android.os.Bundle;
@@ -8,6 +8,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 
 import com.abt.basic.R;
+import com.abt.basic.arch.mvvm.view.fragment.BaseFragment;
+import com.abt.basic.arch.mvvm.view.INavigator;
+import com.abt.basic.arch.mvvm.view.holder.ViewModelHolder;
 import com.abt.basic.arch.mvvm.viewmodel.IViewModel;
 
 /**

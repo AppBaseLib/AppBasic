@@ -3,7 +3,7 @@ package com.abt.basic.utils;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 
-import com.abt.basic.app.BasicApplication;
+import com.abt.basic.app.BasicApp;
 
 /**
  * @描述：     @获取资源工具类
@@ -19,7 +19,7 @@ public class ResourceUtil {
      * @return
      */
     public static final String getString(int resid) {
-        return BasicApplication.getAppContext().getString(resid);
+        return BasicApp.getAppContext().getString(resid);
     }
 
     /**
@@ -28,7 +28,7 @@ public class ResourceUtil {
      * @return
      */
     public static final int getDimensionPixelOffset(int resid){
-        return BasicApplication.getAppContext().
+        return BasicApp.getAppContext().
                 getResources().getDimensionPixelOffset(resid);
     }
 
@@ -40,21 +40,21 @@ public class ResourceUtil {
      * @return
      */
     public static final String getString(int resid, Object... formatArgs) {
-        return BasicApplication.getAppContext().getString(resid, formatArgs);
+        return BasicApp.getAppContext().getString(resid, formatArgs);
     }
 
     /**
      * 获取颜色
      */
     public static final int getColor(int resid) {
-        return BasicApplication.getAppContext().getResources().getColor(resid);
+        return BasicApp.getAppContext().getResources().getColor(resid);
     }
 
     /**
      * 获取图片
      */
     public static final Drawable getDrawable(int resid) {
-        return BasicApplication.getAppContext().getResources().getDrawable(resid);
+        return BasicApp.getAppContext().getResources().getDrawable(resid);
     }
 
     /**
@@ -64,7 +64,7 @@ public class ResourceUtil {
      * @return
      */
     public static final float getDimens(int resid) {
-        return  BasicApplication.getAppContext().getResources().getDimension(resid);
+        return  BasicApp.getAppContext().getResources().getDimension(resid);
     }
 
     /**
@@ -74,7 +74,7 @@ public class ResourceUtil {
      * @return
      */
     public static final String[] getStringArray(int resid) {
-        return BasicApplication.getAppContext().getResources().getStringArray(resid);
+        return BasicApp.getAppContext().getResources().getStringArray(resid);
     }
 
     /**
@@ -84,7 +84,7 @@ public class ResourceUtil {
      * @return
      */
     public static final int getInteger(int resid) {
-        return BasicApplication.getAppContext().getResources().getInteger(resid);
+        return BasicApp.getAppContext().getResources().getInteger(resid);
     }
 
     /**
@@ -93,7 +93,7 @@ public class ResourceUtil {
      * @return
      */
     public static final int getDrawableResId(String name) {
-        final Context context = BasicApplication.getAppContext();
+        final Context context = BasicApp.getAppContext();
         return context.getResources().getIdentifier(name, "drawable",
                 context.getPackageName());
     }

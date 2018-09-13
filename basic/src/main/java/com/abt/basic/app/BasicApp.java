@@ -9,9 +9,9 @@ import com.abt.basic.BuildConfig;
  * @作者： @黄卫旗
  * @创建时间： @21/05/2018
  */
-public abstract class BasicApplication extends Application {
+public abstract class BasicApp extends Application {
 
-    private static BasicApplication sContext;
+    private static BasicApp sContext;
 
     @Override
     public void onCreate() {
@@ -21,7 +21,7 @@ public abstract class BasicApplication extends Application {
         initComplete();
     }
 
-    public static final BasicApplication getAppContext() {
+    public static final BasicApp getAppContext() {
         return sContext;
     }
 

@@ -1,5 +1,21 @@
+package com.abt.basic.arch.mvvm.view.activity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.net.http.SslError;
+import android.os.Build;
+import android.os.Bundle;
+import android.view.KeyEvent;
+import android.view.View;
+import android.webkit.SslErrorHandler;
+import android.webkit.WebChromeClient;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.ProgressBar;
 
+import com.abt.basic.R;
+import com.abt.basic.app.BasicApp;
 
 /**
  * @描述： @BaseWebViewActivity
@@ -26,14 +42,10 @@ public abstract class BaseWebViewActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_webview);
+        initViews();
     }
 
-    @Override
-    protected int getLayoutId() {
-        return R.layout.activity_webview;
-    }
-
-    @Override
     protected void initViews() {
         setTitle("Android JSBridge");
         mTopLoadingBar = (ProgressBar) findViewById(R.id.progress_bar);
@@ -87,7 +99,7 @@ public abstract class BaseWebViewActivity extends BaseActivity {
         mWebView.setWebViewClient(new WebViewClient() {
             @Override
             public void onReceivedSslError(WebView view, final SslErrorHandler handler, SslError error) {
-                final AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
+                final AlertDialog.Builder builder = new AlertDialog.Builder(BasicApp.getAppContext());
                 String message = "SSL证书错误";
                 switch (error.getPrimaryError()) {
                     case SslError.SSL_UNTRUSTED:

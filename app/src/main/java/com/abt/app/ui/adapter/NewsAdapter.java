@@ -10,6 +10,7 @@ import com.abt.app.R;
 import com.abt.app.data.bean.SimpleNewsBean;
 import com.abt.basic.arch.mvvm.view.load.BaseAdapter;
 import com.abt.basic.arch.mvvm.view.load.BaseViewHolder;
+import com.abt.basic.utils.ToastUtil;
 
 /**
  * @描述： @NewsAdapter
@@ -45,10 +46,10 @@ public class NewsAdapter extends BaseAdapter<SimpleNewsBean, BaseViewHolder> {
     public void clickDianZan(SimpleNewsBean simpleNewsBean, int position) {
         if (simpleNewsBean.isGood.get()) {
             simpleNewsBean.isGood.set(false);
-            ToastUtils.show(mContext, "取消点赞 position=" + position);
+            ToastUtil.show("取消点赞 position=" + position);
         } else {
             simpleNewsBean.isGood.set(true);
-            ToastUtils.show(mContext, "点赞成功 position=" + position);
+            ToastUtil.show("点赞成功 position=" + position);
         }
     }
 }

@@ -1,7 +1,8 @@
-package com.abt.basic.arch.mvvm.view;
+package com.abt.basic.arch.mvvm.view.fragment;
 
 import android.support.v4.app.Fragment;
 
+import com.abt.basic.arch.mvvm.view.IView;
 import com.abt.basic.arch.mvvm.viewmodel.IViewModel;
 
 /**

@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 apply from: 'nexus_maven_push.gradle'
 
 android {
-    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    compileSdkVersion 27
     defaultConfig {
         minSdkVersion rootProject.ext.android["minSdkVersion"]
         targetSdkVersion rootProject.ext.android["targetSdkVersion"]
@@ -19,6 +19,7 @@ android {
     dataBinding {
         enabled = true
     }
+    buildToolsVersion '27.0.0'
 }
 
 dependencies {
@@ -27,10 +28,8 @@ dependencies {
     testImplementation rootProject.ext.test["junit"]
     api 'com.jcodecraeer:xrecyclerview:1.5.9'
     implementation 'com.orhanobut:logger:2.2.0'
-
     implementation rootProject.ext.dependencies["glide"]
     implementation rootProject.ext.dependencies["glide-okhttp3-integration"]
-
     debugCompile rootProject.ext.dependencies["debugCompile"]
     releaseCompile rootProject.ext.dependencies["releaseCompile"]
 }

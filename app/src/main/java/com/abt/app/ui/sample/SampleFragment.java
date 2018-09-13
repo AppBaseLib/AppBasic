@@ -7,9 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.abt.app.databinding.FragmentSampleBinding;
-import com.abt.basic.arch.mvvm.view.BaseFragment;
-import com.abt.basic.arch.mvvm.viewmodel.ToolbarViewModel;
 import com.abt.app.viewmodel.SampleViewModel;
+import com.abt.basic.arch.mvvm.view.fragment.BaseFragment;
+import com.abt.basic.arch.mvvm.viewmodel.ToolbarViewModel;
 
 /**
  * @描述： @SampleFragment
